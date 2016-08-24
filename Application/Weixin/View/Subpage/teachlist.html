@@ -1,0 +1,140 @@
+<include file="Public:script-load-page"/>
+<body style="background:#ececec">
+<style type="text/css">
+    .w-c{padding-top: 55px;}
+    .h-p{position: fixed;z-index: 100}
+    .mstj-p{display: table;width:100%;padding:0;;margin: 2px;}
+    .mstj-p img{width: 100%;height: 13em;padding:3%;}
+    .mstj-p li{float: left; width: 48%;border: #dedede 1px solid;margin: 1%;float: left;background-color: #FFFFFF}
+    .de{text-align: start;padding-left: 5%;font-size: 0.8em;}
+    .t-1{font-size: 1em;}
+    .c-0{padding-bottom: 5%;}
+    .h-b{display: none; position: absolute;background-color: #fff;color: #2f2f2f;text-align: left;padding: 0 3%;width: 60%;line-height: 3em;}
+    .h-a{display: block}
+    .h-b li:focus {
+        outline-width:0;
+    }
+</style>
+<div class="header h-p">
+    <div class="left_t header_back">
+
+    </div>
+    <div class="middle_t site_20">学校名师</div>
+    <div class="right_t">
+        <span class="cl-1">分类</span>
+        <ul class="h-b">
+            <li>语文</li>
+            <li>数学</li>
+            <li>英语</li>
+        </ul>
+    </div>
+</div>
+<!--content部分-->
+<div class="w-c">
+    <div>
+        <ul class="mstj-p"><!--将图片内容用h5及css画出来-->
+            <li>
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+            <li>
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+            <li>
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+            <li>
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+            <li>
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+            <li >
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+            <li >
+                <div style="padding-bottom:3%">
+                    <a href="{:U('Subpage/teacher')}"><img src='__PUBLIC__/Weixin/images/img_t01.png'></a>
+                </div>
+                <div class="de t-1">赫拉老师</div>
+                <div class="de">教龄：7年</div>
+                <div class="de c-0">数学/小学/初中</div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--content部分结束-->
+</body>
+<script>
+    $(".header_back").click(function () {
+        window.history.back();
+    });
+    $(".bt-1").click(function () {
+        $(".bt-1").addClass("bn-1");
+        $(".bt-2").removeClass("bn-1");
+        $(".bt-3").removeClass("bn-1");
+    });
+    $(".bt-2").click(function () {
+        $(".bt-1").removeClass("bn-1");
+        $(".bt-3").removeClass("bn-1");
+        $(".bt-3").removeClass("glyphicon-arrow-up");
+        $(".bt-3").addClass("glyphicon-arrow-down");
+        var str= document.getElementsByClassName("bn-1").length;
+        if(str){
+            $(".bt-2").toggleClass("glyphicon-arrow-down");
+            $(".bt-2").toggleClass("glyphicon-arrow-up");
+        }else{
+            $(".bt-2").addClass("bn-1");
+        }
+    });
+    $(".bt-3").click(function () {
+        $(".bt-1").removeClass("bn-1");
+        $(".bt-2").removeClass("bn-1");
+        $(".bt-2").removeClass("glyphicon-arrow-up");
+        $(".bt-2").addClass("glyphicon-arrow-down");
+        var str= document.getElementsByClassName("bn-1").length;
+        if(str){
+            $(".bt-3").toggleClass("glyphicon-arrow-down");
+            $(".bt-3").toggleClass("glyphicon-arrow-up");
+        }else{
+            $(".bt-3").addClass("bn-1");
+        }
+    });
+    $(".cl-1").click(function () {
+        $(".h-b").toggleClass("h-a");
+    });
+
+</script>
+</html>
+
+

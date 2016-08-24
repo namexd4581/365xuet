@@ -1,0 +1,55 @@
+<include file="Public:script-load-page"/>
+<body>
+<style>
+.tixian {
+margin-top: 10px;
+text-align: center;
+height: 40px;
+line-height: 40px;
+color: white;
+background: orange;
+width: 95%;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px
+}
+</style>
+<div style="background: #eeeeee">
+    <div id="content_div">
+        <div class="header"  style="z-index: 100;position: fixed;">
+            <div class="left_t">
+                <a href="{:U('money')}" class="header_back"></a>
+            </div>
+            <div class="middle_t site_20">余额提现</div>
+            <div class="right_t">
+            </div>
+        </div>
+    </div>
+    <header class="demos-header" style="padding-top: 85px; text-align: left; margin-left: 10px; font-size: 0.8em;">
+        <span>可提现余额</span><span style="color: orange">100元</span>
+    </header>
+
+    <div class="weui_cells weui_cells_form" style="margin-top: 10px">
+        <div class="weui_cell">
+            <div class="weui_cell_hd">金额</div>
+            <div class="weui_cell_bd weui_cell_primary" style="margin-left: 10px">
+                <input class="weui_input" type="text" placeholder="请输入提现金额">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select" >
+            <div class="weui_cell_hd" style="text-align: left;padding-left: 15px">
+                <span class="weui_label" >银行卡</span></div>
+                <select class="weui_select" name="select1">
+                    <option selected="" value="0">银行卡</option>
+                    <option value="1">工商银行</option>
+                    <option value="2">农业银行</option>
+                    <option value="3">邮政储蓄</option>
+                </select>
+            </div>
+        </div>
+    </div>
+          <input type="button" class="tixian" value="确认提现"/>
+    </div>
+</body>
+</html>

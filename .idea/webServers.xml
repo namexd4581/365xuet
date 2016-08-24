@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0dfd95d6-74f8-4383-b8ee-c242190d50e0" name="school29.360xuet.com" url="http://school29.360xuet.com">
+        <fileTransfer host="112.74.90.200" port="21" password="dfd9dfc9dfc2dfc5dfc5dfc6df98df93" username="school29">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="9ab51bf9-2688-4cb6-a7fd-613da5aa82b7" name="school29" url="http://112.74.90.200">
+        <fileTransfer host="112.74.90.200" port="21" username="school29">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

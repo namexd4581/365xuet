@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><script>myAlert('尚未开通')</script>

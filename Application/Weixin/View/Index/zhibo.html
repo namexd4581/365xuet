@@ -1,0 +1,37 @@
+<include file="Public:script-load-page"/>
+<body style="background:#ececec">
+<div class="header">
+    <div class="left_t">
+        <a href="index.html" class="header_back"></a>
+    </div>
+    <div class="middle_t site_20">我的直播</div>
+    <div class="right_t">
+        <span class="rigth"></span>
+    </div>
+</div>
+<div class="ma_top">
+    <div class="jiaoshi">
+        <volist name="list" id="vo">
+        <a href="#" style="height: 230px;margin-bottom: 15px">
+        <img src="http://www.360xuet.com{$vo.class_pic}">
+        <div class="title" style="height: 60px;"><span>{$vo.class_name}</span></div>
+        <if condition="$vo.zbstate eq 'start'">
+            <div class="title1" style="width: 96%;background:#ff6600;border-color:#ff6600;color:#fff;" onclick="window.location.href='golive/classid/{$vo.id}';">正在直播</div>
+            <elseif condition="$vo.zbstate eq 'end'"/>
+            <div class="title1" style="width: 96%;background:#ccc;border-color:#ccc;color:#666;" onclick="window.location.href='goplayback/classid/{$vo.id}';">已结束|观看回放
+            </div>
+            <elseif condition="$vo.zbstate eq 'wait'"/>
+            <div class="title1" style="width: 96%;" onclick="window.location.href='golive/classid/{$vo.id}';">离直播还有{$vo.zbsub}</div>
+
+        </if>
+        </a>
+        </volist>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(".left_t").click( function() {
+        window.history.back();
+    });
+</script>

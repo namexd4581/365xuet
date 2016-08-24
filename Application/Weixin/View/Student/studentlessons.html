@@ -1,0 +1,89 @@
+<include file="Public:script-load-page"/>
+<style>
+    #tabbox{ width:100%; overflow:hidden; margin:0;}
+    .tab_conbox{border: 1px solid white;border-top: none;}
+    .tab_con{ display:none;}
+
+    .tabs{height: 40px;margin: 0;padding-top: 55px;padding-left: 0px;width: 100%;}
+    .tabs li{height:40px;line-height:40px;float:left;width:33.3%;margin-bottom: -1px;background: white;overflow: hidden;position: relative;}
+    .tabs li a {display: block;padding: 0 20px;border: 1px solid #fff;outline: none;}
+    .tabs li a:hover {background: #ccc;}
+    .tabs .thistab,.tabs .thistab a:hover{background: #fff;border-bottom: 2px solid #ffd424;color:#ffd424 }
+
+    .tab_con {padding:12px;font-size: 14px; line-height:175%;}
+</style>
+<body>
+<div style="background: #ffffff">
+    <div id="content_div">
+        <div class="header">
+            <div class="left_t">
+                <a href="{:U('index')}" class="header_back"></a>
+            </div>
+            <div class="middle_t site_20">我的课程表</div>
+            <div class="right_t">
+            </div>
+        </div>
+    </div>
+    <div id="tabbox">
+        <ul class="tabs" id="tabs">
+            <li>课程日历</li>
+            <li>待上课</li>
+            <li>已上课</li>
+        </ul>
+        <ul class="tab_conbox" id="tab_conbox">
+            <li class="tab_con">
+                <div class="weui_cells weui_cells_form">
+                    <div class="weui_cell" style="padding: 0px">
+                        <!--<div class="weui_cell_hd"><label for="date3" class="weui_label">日期</label></div>-->
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <input class="weui_input" id="date3" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div id="inline-calendar"></div>
+            </li>
+
+            <li class="tab_con">
+                   <p> <span>暂无课程</span></p>
+            </li>
+
+            <li class="tab_con">
+                    <p><span>暂无课程</span></p>
+            </li>
+        </ul>
+    </div>
+    </div>
+<script src="__PUBLIC__/Weui/js/jquery.min..js"></script>
+<script src="__PUBLIC__/Weui/js/jquery-weui.js"></script>
+
+<script>
+$(document).ready(function() {
+    jQuery.jqtab = function(tabtit,tab_conbox,shijian) {
+        $(tab_conbox).find("li").hide();
+        $(tabtit).find("li:first").addClass("thistab").show();
+        $(tab_conbox).find("li:first").show();
+
+        $(tabtit).find("li").bind(shijian,function(){
+            $(this).addClass("thistab").siblings("li").removeClass("thistab");
+            var activeindex = $(tabtit).find("li").index(this);
+            $(tab_conbox).children().eq(activeindex).show().siblings().hide();
+            return false;
+        });
+
+    };
+    /*调用方法如下：*/
+    $.jqtab("#tabs","#tab_conbox","click");
+});
+$("#my-input").calendar();
+
+</script>
+<script>
+    $("#date").calendar();
+    $("#date2").calendar();
+    $("#inline-calendar").calendar({
+        container: "#inline-calendar",
+        input: "#date3"
+    });
+</script>
+</body>
+</html>

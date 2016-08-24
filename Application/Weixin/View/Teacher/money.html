@@ -1,0 +1,103 @@
+<include file="Public:script-load-page"/>
+<style>
+    .tixian {
+        margin-top: 10px;
+        margin-left: 2.5%;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        background: orange;
+        width: 95%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px
+    }
+
+    .chongzhi {
+        margin-top: 10px;
+        margin-left: 2.5%;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        background: #0c80ba;
+        width: 95%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px
+    }
+
+    .mingxi {
+        margin-top: 10px;
+        margin-left: 2.5%;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        color: orange;
+        border: 1px solid orange;
+        width: 95%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px
+    }
+
+    a {
+        color: #FFFFFF
+    }
+</style>
+<body>
+
+<div>
+    <div class="header" style="z-index: 100;position: fixed;">
+        <div class="left_t">
+            <a href="{:U('index')}" class="header_back"></a>
+        </div>
+        <div class="middle_t site_20">我的余额</div>
+        <div class="right_t">
+        </div>
+    </div>
+    <div style="width: 100%;height: 200px;padding-top: 55px">
+        <ul style="margin-top: 20px;padding: 0px">
+            <li>
+                <img src="__PUBLIC__/weixin/images/logo.png" alt=""
+                     style="width: 60px;border-radius:5px;height:60px;text-align: center;line-height: 70px">
+                <br>
+            </li>
+            <li>
+                <span>账户余额:0</span><br>
+            </li>
+            <li>
+                <span>冻结资金:0</span><br>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div class='demos-content-padded'>
+        <a href="javascript:;" id='show-custom' ><div class="chongzhi">充值</div></a>
+        <a href="{:U('Teacher/tixian')}"  ><div class="tixian">提现</div></a>
+        <a href="{:U('Teacher/chongzhijilu')}"  ><div class="mingxi">充值记录</div></a>
+
+    </div>
+    <script src="__PUBLIC__/Weui/js/jquery.min..js"></script>
+    <script src="__PUBLIC__/Weui/js/jquery-weui.js"></script>
+
+    <script>
+
+        $(document).on("click", "#show-custom", function() {
+            $.modal({
+                title: "充值",
+                text: "请选择支付方式",
+                buttons: [
+                    { text: "支付宝", onClick: function(){ $.alert("你选择了支付宝"); } },
+                    { text: "微信支付", onClick: function(){ $.alert("你选择了微信支付"); } },
+                    { text: "取消", className: "default"},
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

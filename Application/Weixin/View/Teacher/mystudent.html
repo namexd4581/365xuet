@@ -1,0 +1,51 @@
+<include file="Public:script-load-page"/>
+<style>
+    .tabs_listleft{padding-top:10px;text-align: left;font-size: 0.7em;  height: 80px;border-bottom: 1px solid #eeeeee;width: 70%;float: left}
+    .tabs_listright{padding-right: 2px;padding-top:50px;text-align: left;float: left;width: 30%;height:80px;font-size: 0.7em;text-align: right;border-bottom: 1px solid #eeeeee}
+    .tabs_listrighta{padding:6px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-left-radius: 3px;border-bottom-right-radius:3px;font-size:1em;color: #ffffff;background: orange}
+</style>
+<body>
+<div style="background: #ffffff">
+    <div id="content_div">
+        <div class="header"  style="z-index: 100;position: fixed;">
+            <div class="left_t">
+                <a href="{:U('index')}" class="header_back"></a>
+            </div>
+            <div class="middle_t site_20">我的学生</div>
+            <div class="right_t">
+            </div>
+        </div>
+    </div>
+    <div style="border: 1px solid #eeeeee;width: 100%;padding-top: 55px">
+        <div class="tabs_listleft">
+            <img src="__PUBLIC__/Weixin/images/img_photo.png" style="float: left" alt="" height="65px" width="65px">
+            <span style="font-size: 1.5em">学生昵称</span><br><br><br>
+            <span>年级</span><br>
+        </div>
+        <div class="tabs_listright">
+            <a class="tabs_listrighta" href="">查看详情</a>
+        </div>
+        <div class="tabs_listleft">
+            <img src="__PUBLIC__/Weixin/images/img_photo.png" style="float: left" alt="" height="65px" width="65px">
+            <span style="font-size: 1.5em">学生昵称</span><br><br><br>
+            <span>年级</span><br>
+        </div>
+        <div class="tabs_listright">
+            <a class="tabs_listrighta" href="">查看详情</a>
+        </div>
+        <div class="tabs_listleft">
+            <img src="__PUBLIC__/Weixin/images/img_photo.png" style="float: left" alt="" height="65px" width="65px">
+            <span style="font-size: 1.5em">学生昵称</span><br><br><br>
+            <span>年级</span><br>
+        </div>
+        <div class="tabs_listright">
+            <a class="tabs_listrighta" href="">查看详情</a>
+        </div>
+</div>
+<script>
+    function delet() {
+        confirm('确定要删除吗');
+    }
+</script>
+</body>
+</html>

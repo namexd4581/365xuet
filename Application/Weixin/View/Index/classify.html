@@ -1,0 +1,53 @@
+<include file="Public:script-load-page"/>
+<body style="background:#ececec">
+<style>
+    .a-1{
+        color: #FF1515!important;}
+</style>
+<div class="header">
+    <div class="left_t">
+        <img src="__PUBLIC__/Weixin/images/logo.png">
+    </div>
+    <div class="middle_t site_20">分类</div>
+    <div class="right_t">
+        <span class="rigth"></span>
+    </div>
+</div>
+<nav style="margin-top: 0;margin-bottom: 55px">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="{:U('Subpage/classify')}"><img style="width:100%;height: 15rem;" src="__PUBLIC__/Weixin/images/001.png"></a></div>
+            <div class="swiper-slide"><a href="{:U('Subpage/classify')}"><img style="width:100%;height: 15rem;" src="__PUBLIC__/Weixin/images/ph_1.png"></a></div>
+            <div class="swiper-slide"><a href="{:U('Subpage/classify')}"><img style="width:100%;height: 15rem;" src="__PUBLIC__/Weixin/images/ph_1.png"></a></div>
+        </div>
+    </div>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td width='50%'><a href="{:U('index/zhibo')}" class='img2'>直播课堂</a></td>
+            <td width='50%'><a href="{:U('index/spzy')}" class='img3'>视频资源</a></td>
+        </tr>
+        <tr>
+            <td width='50%'><a href="{:U('index/qzhd')}" class='img4'>亲子活动</a></td>
+            <td width='50%'><a href="{:U('index/jfzx')}" class='img5'>家访在线</a></td>
+        </tr>
+        <tr>
+            <td width='50%'><a href="{:U('index/xlsd')}" class='img6'>心理疏导</a></td>
+        </tr>
+    </table>
+</nav>
+<div class="bottom">
+    <ul>
+        <li><a href="{:U('index/index')}"><img src="__PUBLIC__/Weixin/images/home.png"> 首页</a></li>
+        <li><a class="a-1" href="{:U('index/classify')}"><img src="__PUBLIC__/Weixin/images/cent_.png">分类</a></li>
+        <li><a href="{:U('index/about')}"><img src="__PUBLIC__/Weixin/images/contment.png">联系我们</a></li>
+        <li><a href="{:U('Public/login')}"><img src="__PUBLIC__/Weixin/images/1015.png">个人中心</a></li>
+    </ul>
+</div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 2000,//可选选项，自动滑动
+        autoplayDisableOnInteraction : false,
+    })
+</script>
+</html>

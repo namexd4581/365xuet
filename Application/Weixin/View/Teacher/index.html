@@ -1,0 +1,109 @@
+<include file="Public:script-load-page"/>
+<body>
+<style>
+    .mylesson{
+        height: 80px;
+    }
+    .mylesson ul{
+        width: 100%;height: 50px;background: white;padding-left: 0px;text-align: left
+    }
+    .mylesson ul li{
+        float: left;background: white;margin-top: -1px;height: 40px;width: 25%;text-align:center;border: 1px solid #ececec;line-height:40px;font-size: 0.8em
+    }
+    .money{
+        height:80px;;margin-top: 10px
+    }
+    .money ul{
+        width: 100%;height: 50px;background: white;padding-left: 0px;text-align: left
+    }
+    .money ul li{
+        float: left;background: white;height: 40px;width: 50%;text-align:center;border: 1px solid #ececec;line-height:40px;font-size: 0.8em
+    }
+    .setting{
+        height: 120px;margin-top:10px
+    }
+    .setting ul{
+        width: 100%;height: 50px;background: white;padding-left: 0px;text-align: left
+    }
+    .setting ul li{
+       background: white;padding-left: 15px;margin-top:-1px;height: 40px;width: 100%;text-align:left;border: 1px solid #ececec;line-height:40px;font-size: 0.8em
+
+    }
+    a{
+        color: #6f6f6f;
+    }
+</style>
+<!--头部-->
+<div class="header">
+    <div class="left_t">
+        &nbsp;&nbsp;
+    </div>
+    <div class="middle_t site_20">个人中心</div>
+    <div class="right_t">
+        <span class="rigth"></span>
+    </div>
+</div>
+<!--中间部分-->
+<div style="padding-top: 50px;background: #ececec; width:100% ;height:550px">
+    <div style="background: orange;width: 100%;height: 90px;">
+        <div style="text-align: left;padding-left: 0px;padding-top: 10px;float: left">
+            <ul style="padding-left: 5px">
+                <li>
+                    <empty name="data.avatar">
+                    <img src="__PUBLIC__/Weixin/images/img_photo.png" height="50px" width="50px" alt="" class="img-circle">
+                    <else />
+                      <img src="__PUBLIC__/Weixin/images/{$data.avatar}" height="50px" width="50px" alt="" class="img-circle">
+                    </empty>
+                </li>
+                <li style="font-size: 0.7em;color: white">{$data.nickname}</li>
+            </ul>
+        </div>
+        <div style="float: left;padding-top: 35px;text-align: left">
+            <ul style="padding-left: 5px">
+                <li style="font-size: 0.7em;color: white">账户余额：{$data.money}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mylesson">
+        <ul >
+            <li style="border:1px solid #ececec;width: 100%;text-align: left;font-size: 1em;padding-left: 5px;height: 40px" >我的课程</li>
+            <li><a href="{:U('Teacher/mylesson')}">我的直播课</a></li>
+            <li><a href="{:U('Teacher/myvideo')}">我的视频课</a></li>
+            <li><a href="{:U('Teacher/underline')}">我的线下课</a></li>
+            <li><a href="{:U('Teacher/mystudent')}">我的学生</a></li>
+        </ul>
+
+    </div>
+    <div class="money">
+        <ul>
+            <li style="border:1px solid #ececec;font-size: 1em;width: 100%;padding-left: 5px;text-align: left" >钱包管理</li>
+            <li><a href="{:U('Teacher/money')}">账户余额</a></li>
+            <li><a href="{:U('Teacher/order')}">我的订单</a></li>
+        </ul>
+
+    </div>
+
+    <div class="setting">
+        <ul>
+            <li style="border:1px solid #ececec;width: 100%;font-size: 1em;padding-left: 5px;text-align: left">帐号设置</li>
+            <a href="{:U('Teacher/personalset')}"><li>个人设置</li></a>
+            <a href="{:U('Teacher/setting')}"><li>安全设置</li></a>
+        </ul>
+
+    </div>
+    <div style="text-align: center;margin-top: 10px">
+        <a class="btn btn-danger" style="width: 90%" href="{:U('Public/logout')}">退出登录</a></div>
+</div>
+<!--底部-->
+<div class="bottom">
+    <ul>
+        <li><a class="a-1" href="{:U('index/index')}"><img src="__PUBLIC__/Weixin/images/home.png"> 首页</a></li>
+        <li><a href="{:U('index/classify')}"><img src="__PUBLIC__/Weixin/images/cent_.png">分类</a></li>
+        <li><a href="{:U('index/about')}"><img src="__PUBLIC__/Weixin/images/contment.png">联系我们</a></li>
+        <li><a  style="color: red" href="{:U('Public/login')}"><img src="__PUBLIC__/Weixin/images/1015.png">个人中心</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
