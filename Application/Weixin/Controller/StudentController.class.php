@@ -13,6 +13,20 @@ use Think\Model;
 class StudentController extends Controller
 {
     public function index(){
+        if(session("userid")==null||session("userid")=="")
+        {
+            @header("Public/login.html");
+        }
+        $userid=session("userid");
+        $model=new Model();
+        $sql="select * from 360class.class_student_users WHERE id='$userid'";
+        $query=$model->query($sql);
+        if ($query!=null&&count($query)==1){
+            $data["nickname"]=$query[0]["user_nicename"];
+            $data["avatar"]=$query[0]["avatar"];
+            $data["money"]=$query[0]["money"];
+        }
+        $this->assign("data",$data);
         $this->display();
     }
     public function mylesson(){

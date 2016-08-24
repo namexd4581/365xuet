@@ -54,13 +54,16 @@
                 </div>
                 <div class="weui_uploader_bd">
                     <ul class="weui_uploader_files">
-                        <li class="weui_uploader_file" style="height: 75px;margin-top:10px"><img
-                            src="__PUBLIC__/weixin/images/{$data['avatar']}" alt=""></li>
+                        <li class="weui_uploader_file" style="margin-top:10px;width: 29%" >
+                            <img  style="height: 60px;width:60px"src="__PUBLIC__/weixin/images/{$data['avatar']}" >
+                        </li>
+                        <li class="weui_uploader_file" style="margin-top:10px;width: 29%"id="image"></li>
+                        <li class="weui_uploader_file" style="margin-top:10px;width: 29%">
+                            <div class="weui_uploader_input_wrp" style="float: left">
+                                <input class="weui_uploader_input" type="file"  name="avatar" id="avatar">
+                            </div></li>
 
                     </ul>
-                    <div class="weui_uploader_input_wrp">
-                        <input class="weui_uploader_input" type="file" name="avatar">
-                    </div>
                 </div>
             </div>
         </div>
