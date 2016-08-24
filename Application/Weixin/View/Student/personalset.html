@@ -31,10 +31,9 @@
                 <label class="weui_label">性别</label></div>
             <select class="weui_select" name="sex" >
                 <switch name="data.sex">
-                    <case value="0"><option value="0">保密</option></case>
+                    <case value="0"><option value="0">请选择</option></case>
                     <case value="1"><option value="0">男</option></case>
                     <case value="2"><option value="0">女</option></case>
-                    <default /><option value="0">请选择</option>
                 </switch>
                 <option value="1">男</option>
                 <option value="2">女</option>
@@ -55,7 +54,9 @@
                 </div>
                 <div class="weui_uploader_bd">
                     <ul class="weui_uploader_files">
-                        <li class="weui_uploader_file" style="height: 75px;margin-top:10px;background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                        <li class="weui_uploader_file" style="height: 75px;margin-top:10px"><img
+                            src="__PUBLIC__/weixin/images/{$data['avatar']}" alt=""></li>
+
                     </ul>
                     <div class="weui_uploader_input_wrp">
                         <input class="weui_uploader_input" type="file" name="avatar">
