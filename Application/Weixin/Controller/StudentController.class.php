@@ -70,9 +70,9 @@ class StudentController extends Controller
             }
             $result=$form->where($userid)->save($data);
             if ($result){
-                $this->show("<script>alert('保存成功');window.history.go(-1);</script>");
+                $this->show("<script>myAlert('保存成功');window.history.go(-1);</script>");
             }else{
-                $this->show("<script>alert('保存失败');window.history.go(-1);</script>");
+                $this->show("<script>myAlert('保存失败');window.history.go(-1);</script>");
             }
         }else{
             $info=$form->where($userid)->select();

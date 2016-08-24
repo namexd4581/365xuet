@@ -12,23 +12,30 @@
             </div>
         </div>
     </div>
+    <form id="personalinfo" name="personalinfo" enctype="multipart/form-data" action="{:U('personalset')}" method="post">
     <div style="margin-top: 0px;font-size: 15px; text-align: left; padding-top: 55px;" class="weui_cells weui_cells_form">
         <div class="weui_cell">
             <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" placeholder="请输入姓名" type="text" name="user_realname">
+                <input class="weui_input" placeholder="请输入姓名" type="text" name="user_realname" value="{$data['user_realname']}">
             </div>
         </div>
         <div class="weui_cell">
             <div class="weui_cell_hd"><label class="weui_label">昵称</label></div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" placeholder="请输入昵称" type="text" name="user_nicename">
+                <input class="weui_input" placeholder="请输入昵称" type="text" name="user_nicename" value="{$data['user_nicename']}">
             </div>
         </div>
         <div style="padding-left: 15px;" class="weui_cell weui_cell_select">
             <div class="weui_cell_hd ">
                 <label class="weui_label">性别</label></div>
             <select class="weui_select" name="sex" >
+                <switch name="data.sex">
+                    <case value="0"><option value="0">保密</option></case>
+                    <case value="1"><option value="0">男</option></case>
+                    <case value="2"><option value="0">女</option></case>
+                    <default /><option value="0">请选择</option>
+                </switch>
                 <option value="1">男</option>
                 <option value="2">女</option>
             </select>
@@ -58,6 +65,7 @@
         </div>
     </div>
     </div>
+    </form>
     </div>
 <script src="__PUBLIC__/Weui/js/jquery.min..js"></script>
 <script src="__PUBLIC__/Weui/js/jquery-weui.js"></script>
