@@ -79,7 +79,6 @@ class StudentController extends Controller
             $data['user_realname']=$info[0]['user_realname'];
             $data['user_nicename']=$info[0]['user_nicename'];
             $data['sex']=$info[0]['sex'];
-            $data['teacher_summary']=$info[0]['teacher_summary'];
             $data['areacode']=$info[0]['areacode'];
             $data['avatar']= $info[0]['avatar'];
             $this->assign('data',$data);
